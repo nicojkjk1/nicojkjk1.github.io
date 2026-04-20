@@ -75,8 +75,6 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  text-align: center;
   padding: 50px 20px;
   position: relative;
   z-index: 1;
@@ -90,6 +88,7 @@ body::after {
   object-fit: cover;
   border: 3px solid #ff7ac6;
   animation: float 3s ease-in-out infinite;
+  margin-bottom: 15px;
 }
 
 @keyframes float {
@@ -98,28 +97,30 @@ body::after {
   100% { transform: translateY(0px); }
 }
 
-/* TITULO SIN FONDO */
+/* TITULO */
 h1 {
   font-size: 40px;
-  margin: 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* EMOJI GRANDE */
+/* SOLO ESTE EMOJI CUSTOM */
 h1 img {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
 }
 
-/* TARJETAS DE TEXTO */
-p, h2, h3 {
-  background: rgba(49,51,56,0.75);
-  padding: 10px 15px;
-  border-radius: 12px;
-  backdrop-filter: blur(4px);
-  margin: 5px 0;
+/* EMBED STYLE */
+.card {
+  background: rgba(49,51,56,0.85);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  backdrop-filter: blur(5px);
+  text-align: left;
 }
 
 /* BOTONES */
@@ -193,47 +194,30 @@ for (let i = 0; i < 20; i++) {
   zNicol System's
 </h1>
 
-<p>
-  <img src="https://cdn.discordapp.com/emojis/1494243427167109153.png" width="16">
-  La bot perfecta para gestionar tu servidor de Discord
-</p>
+<div class="card">
 
-<a class="btn">Invitar</a>
-<a class="btn">Soporte</a>
+<p>💖 Hola, soy <b>zNicol System’s</b>, tu bot multifunción diseñada para hacer tu servidor más bonito, organizado y activo.</p>
 
-<h2>
-  <img src="https://cdn.discordapp.com/emojis/1494238180143140904.png" width="18">
-  Información
-</h2>
+<p><b>¿Qué puedo hacer?</b></p>
+<p>⚙️ Sistemas avanzados (niveles, automod, logs)</p>
+<p>🛡️ Moderación completa para tu servidor</p>
+<p>🎮 Comandos divertidos para tu comunidad</p>
 
-<h3>
-  <img src="https://cdn.discordapp.com/emojis/1495657566733078569.png" width="18">
-  Hola, soy zNicol
-</h3>
-
-<p>💖 Hiiiii~ soy <b>zNicol System´s</b> 💕</p>
-
-<h3>
-  <img src="https://cdn.discordapp.com/emojis/1494243427167109153.png" width="18">
-  ¿Qué puedo hacer?
-</h3>
-
-<p>⚙️ Sistemas avanzados</p>
-<p>🛡️ Moderación</p>
-<p>🎀 Comandos</p>
-
-<h3>
-  <img src="https://cdn.discordapp.com/emojis/1495653245098393600.png" width="18">
-  Cómo usarme
-</h3>
-
+<p><b>Cómo usarme:</b></p>
 <p>• Prefix: zNicol</p>
 <p>• Slash: /help</p>
 
-<p>💜 zNicol — Tu bot digital ✨</p>
+<p><b>Empieza ahora:</b> usa /help 💜</p>
+
+</div>
+
+<div class="buttons">
+  <a class="btn">Invitar</a>
+  <a class="btn">Soporte</a>
+</div>
 
 <div class="socials">
-  <h3>💌 Redes</h3>
+  <h3>Redes</h3>
   <a href="#">Discord</a>
   <a href="#">Comunidad</a>
   <a href="#">Instagram</a>
