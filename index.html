@@ -100,6 +100,24 @@ h1 {
   margin: 10px 0;
 }
 
+/* 💖 EMOJI GRANDE SOLO EN TITULO */
+.emoji-title {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* 💬 FONDO TIPO CHAT PARA TEXTOS */
+.text-bg {
+  background: rgba(49, 51, 56, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 5px 0;
+}
+
 p {
   color: #b5bac1;
 }
@@ -129,26 +147,6 @@ p {
   text-decoration: none;
   color: white;
   background: linear-gradient(135deg, #ff7ac6, #ffb3e6);
-}
-
-/* 🌸 EMOJIS PERSONALIZADOS */
-.emoji {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  margin: 0 2px;
-}
-
-/* 💖 FONDO TIPO CHAT (NUEVO) */
-.card {
-  background: rgba(49, 51, 56, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 20px;
-  margin: 10px auto;
-  border-radius: 15px;
-  width: 300px;
-  border: 1px solid rgba(255, 122, 198, 0.25);
 }
 </style>
 </head>
@@ -191,12 +189,13 @@ for (let i = 0; i < 20; i++) {
   <source src="1.mp4" type="video/mp4">
 </video>
 
+<!-- 💖 H1 CON EMOJI GRANDE -->
 <h1>
-  <img class="emoji" src="https://cdn.discordapp.com/emojis/1494059956016513085.png">
+  <img class="emoji-title" src="https://cdn.discordapp.com/emojis/1494059956016513085.png">
   zNicol System's
 </h1>
 
-<p>
+<p class="text-bg">
   💖 La bot perfecta para gestionar tu servidor de Discord ✨
 </p>
 
@@ -206,40 +205,40 @@ for (let i = 0; i < 20; i++) {
 </div>
 
 <div class="section">
-  <h2>
+  <h2 class="text-bg">
     <img class="emoji" src="https://cdn.discordapp.com/emojis/1494234293692796948.png">
     Información
   </h2>
 
-  <div class="card">
+  <div class="card text-bg">
 
-<h3>
+<h3 class="text-bg">
   <img class="emoji" src="https://cdn.discordapp.com/emojis/1495657566733078569.png">
   Hola, soy zNicol
 </h3>
 
-<p>
+<p class="text-bg">
   💖 Hiiiii~ soy <b>zNicol</b> 💕
 </p>
 
-<p><b>
+<p class="text-bg"><b>
   <img class="emoji" src="https://cdn.discordapp.com/emojis/1494243427167109153.png">
   ¿Qué puedo hacer?
 </b></p>
 
-<p>⚙️ Sistemas avanzados</p>
-<p>🛡️ Moderación</p>
-<p>🎀 Comandos</p>
+<p class="text-bg">⚙️ Sistemas avanzados</p>
+<p class="text-bg">🛡️ Moderación</p>
+<p class="text-bg">🎀 Comandos</p>
 
-<p><b>
+<p class="text-bg"><b>
   <img class="emoji" src="https://cdn.discordapp.com/emojis/1495653245098393600.png">
   Cómo usarme:
 </b></p>
 
-<p>• Prefix: zNicol</p>
-<p>• Slash: /help</p>
+<p class="text-bg">• Prefix: zNicol</p>
+<p class="text-bg">• Slash: /help</p>
 
-<p>
+<p class="text-bg">
   💜 <b>zNicol</b> — Tu bot digital ✨
 </p>
 
