@@ -70,7 +70,7 @@ body::after {
   }
 }
 
-/* 🌸 FLORES */
+/* FLORES */
 .flower {
   position: fixed;
   top: -10vh;
@@ -82,17 +82,9 @@ body::after {
 }
 
 @keyframes fall {
-  0% {
-    transform: translateY(-10vh) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
 }
 
 /* CONTENEDOR */
@@ -101,47 +93,9 @@ body::after {
   padding: 50px 20px;
   position: relative;
   z-index: 1;
-  animation: fadeIn 1.2s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* LOGO */
-.logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover; 
-  margin-bottom: 15px;
-  border: 3px solid #ff7ac6;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-h1 {
-  font-size: 40px;
-  margin: 10px 0;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-p {
-  color: #b5bac1;
-  animation: fadeIn 1.8s ease-in-out;
-}
-
-/* 🌸 BOTONES KAWAII */
-.buttons {
-  margin-top: 20px;
-}
-
+/* BOTONES */
 .btn {
   background: linear-gradient(135deg, #ff7ac6, #ffb3e6);
   color: white;
@@ -150,49 +104,12 @@ p {
   border-radius: 12px;
   text-decoration: none;
   display: inline-block;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(255, 122, 198, 0.4);
 }
 
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(255, 122, 198, 0.8);
-}
-
-/* SECCIONES */
-.section {
-  margin-top: 50px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.card {
-  background: #313338;
-  padding: 20px;
-  margin: 10px auto;
-  border-radius: 15px;
-  width: 300px;
-  transition: 0.3s;
-  animation: fadeIn 2.2s ease-in-out;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(255,122,198,0.3);
-}
-
-/* 🌸 REDES SOCIALES */
+/* REDES */
 .socials {
   text-align: center;
   margin-top: 60px;
-  padding: 20px;
-  animation: fadeIn 2.5s ease-in-out;
-}
-
-.socials h3 {
-  color: #ff7ac6;
-  margin-bottom: 15px;
 }
 
 .socials a {
@@ -203,25 +120,13 @@ p {
   text-decoration: none;
   color: white;
   background: linear-gradient(135deg, #ff7ac6, #ffb3e6);
-  box-shadow: 0 0 12px rgba(255, 122, 198, 0.4);
-  transition: 0.3s;
-}
-
-.socials a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(255, 122, 198, 0.8);
-}
-
-/* SCROLL SUAVE */
-html {
-  scroll-behavior: smooth;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🎥 VIDEO FONDO -->
+<!-- 🎥 VIDEO -->
 <video autoplay muted loop id="bg-video">
 <source src="2.mp4" type="video/mp4">
 </video>
@@ -233,81 +138,77 @@ for (let i = 0; i < 25; i++) {
   p.className = "particle";
   p.style.left = Math.random() * 100 + "vw";
   p.style.animationDuration = (3 + Math.random() * 5) + "s";
-  p.style.opacity = Math.random();
   document.body.appendChild(p);
 }
 </script>
 
 <!-- 🌸 FLORES -->
 <script>
-const flowers = ["🌸", "🌷", "💮", "🌺"];
+const flowers = ["🌸","🌷","💮","🌺"];
 
 for (let i = 0; i < 20; i++) {
   let f = document.createElement("div");
   f.className = "flower";
-  f.innerText = flowers[Math.floor(Math.random() * flowers.length)];
-
+  f.innerText = flowers[Math.floor(Math.random()*flowers.length)];
   f.style.left = Math.random() * 100 + "vw";
   f.style.animationDuration = (5 + Math.random() * 5) + "s";
-  f.style.fontSize = (14 + Math.random() * 10) + "px";
-  f.style.animationDelay = Math.random() * 5 + "s";
-
   document.body.appendChild(f);
 }
 </script>
 
 <div class="container">
 
-<video class="logo" autoplay muted loop>
-  <source src="1.mp4" type="video/mp4">
-</video>
-
 <h1>zNicol System's</h1>
-<p>La bot perfecta para gestionar tu servidor de Discord</p>
+
+<p>
+  <img src="https://cdn.discordapp.com/emojis/1281344978962092094.png" width="16">
+  La bot perfecta para gestionar tu servidor de Discord
+</p>
 
 <div class="buttons">
-  <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1395515437885952151&scope=bot%20applications.commands&permissions=8">Invitar</a>
-  <a class="btn" href="https://discord.gg/CMv7K8pt7g">Soporte</a>
+  <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1395515437885952151&scope=bot%20applications.commands&permissions=8">
+    Invitar
+  </a>
+
+  <a class="btn" href="https://discord.gg/CMv7K8pt7g">
+    Soporte
+  </a>
 </div>
 
 <div class="section">
-  <h2>🎀 Información</h2>
+  <h2>
+    <img src="https://cdn.discordapp.com/emojis/1281344978962092094.png" width="18">
+    Información
+  </h2>
 
   <div class="card">
 
-   <h3>🌸✨ Hola, soy zNicol ✨🌸</h3>
+<h3>
+  <img src="https://cdn.discordapp.com/emojis/1281344978962092094.png" width="18">
+  Hola, soy zNicol
+</h3>
 
-<p>
-  💖 Hiiiii~ 👋 soy <b>zNicol System´s</b> 💕 tu bot mágica y multifunción creada con muchísimo amor para hacer tu servidor más bonito, ordenado y lleno de vida ✨🌷
-</p>
-
-<p><b>🌸💫 ¿Qué puedo hacer por ti?</b></p>
-<p>⚙️✨ Sistemas avanzados</p>
-<p>🛡️💖 Moderación elegante</p>
-<p>🎀🌈 Comandos divertidos</p>
-
-<p><b>💫🌷 Cómo usarme:</b></p>
-<p>• 🌸 Prefix: <code>zNicol Prefix</code></p>
-<p>• 💫 Slash: <code>/help</code></p>
-
-<p><b>🌷💖 Empieza ahora:</b></p>
-<p>💕 Escribe <code>/help</code></p>
-
-<p>
-  💜✨ <b>zNicol</b> — Tu bot digital 🌷💫
-</p>
+<p>💖 Bot multifunción kawaii ✨</p>
+<p>⚙️ Sistemas avanzados</p>
+<p>🛡️ Moderación elegante</p>
+<p>🎀 Comandos divertidos</p>
 
   </div>
 </div>
 
-<!-- 🌐 REDES SOCIALES -->
+<!-- 🌐 REDES -->
 <div class="socials">
-  <h3>💌 Sígueme en mis redes</h3>
 
-  <a href="https://discord.gg/CMv7K8pt7g" target="_blank">💜 Mi Discord</a>
-  <a href="https://discord.com/invite/znico-community-c-1174807266705281054" target="_blank">💜 Mi Comunidad</a>
-  <a href="https://www.instagram.com/nicojk_151jk/" target="_blank">💻 Instagram de mi creador</a>
-  <a href="https://www.tiktok.com/@znico_jk" target="_blank">🎀 TikTok de mi comunidad</a>
+<h3>
+  <img src="https://cdn.discordapp.com/emojis/1281344978962092094.png" width="18">
+  Sígueme en mis redes
+</h3>
+
+<a href="#">Mi Discord</a>
+<a href="#">Mi Comunidad</a>
+<a href="#">Instagram</a>
+<a href="#">TikTok</a>
+
 </div>
 
 </div>
