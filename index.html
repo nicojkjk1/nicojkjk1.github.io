@@ -59,6 +59,31 @@ body::after {
   }
 }
 
+/* 🌸 FLORES CAYENDO */
+.flower {
+  position: fixed;
+  top: -10vh;
+  font-size: 18px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 /* CONTENEDOR */
 .container {
   text-align: center;
@@ -169,6 +194,24 @@ for (let i = 0; i < 25; i++) {
   p.style.animationDuration = (3 + Math.random() * 5) + "s";
   p.style.opacity = Math.random();
   document.body.appendChild(p);
+}
+</script>
+
+<!-- 🌸 FLORES CAÍDA -->
+<script>
+const flowers = ["🌸", "🌷", "💮", "🌺"];
+
+for (let i = 0; i < 20; i++) {
+  let f = document.createElement("div");
+  f.className = "flower";
+  f.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+
+  f.style.left = Math.random() * 100 + "vw";
+  f.style.animationDuration = (5 + Math.random() * 5) + "s";
+  f.style.fontSize = (14 + Math.random() * 10) + "px";
+  f.style.animationDelay = Math.random() * 5 + "s";
+
+  document.body.appendChild(f);
 }
 </script>
 
