@@ -36,22 +36,6 @@ body::after {
   z-index: -1;
 }
 
-/* FADE IN */
-.container {
-  animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* PARTICULAS */
 .particle {
   position: fixed;
@@ -169,7 +153,7 @@ h1 img {
   background: linear-gradient(135deg, #ff7ac6, #ffb3e6);
 }
 
-/* CONTADOR */
+/* CONTADOR ANIMADO */
 .visit-counter {
   text-align: center;
   margin-top: 30px;
@@ -179,12 +163,19 @@ h1 img {
 
 .visit-counter p {
   font-weight: bold;
+  color: white;
   text-shadow: 0 0 10px #ff7ac6;
 }
 
 .visit-counter img {
   transform: scale(1.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
   filter: drop-shadow(0 0 10px #ff7ac6);
+}
+
+.visit-counter img:hover {
+  transform: scale(1.55);
+  filter: drop-shadow(0 0 18px #ff7ac6);
 }
 
 @keyframes counterFloat {
@@ -193,16 +184,18 @@ h1 img {
   100% { transform: translateY(0px); }
 }
 
-/* FOOTER */
-.footer-pro {
-  text-align: center;
-  margin: 35px 20px;
-  color: white;
-  text-shadow: 0 0 10px #ff7ac6;
-}
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
 
-.footer-pro p {
-  margin: 5px 0;
+  h1 {
+    font-size: 26px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -247,12 +240,19 @@ for (let i = 0; i < 20; i++) {
 </h1>
 
 <div class="buttons">
-  <a class="btn" href="#">Invitar</a>
-  <a class="btn" href="#">Soporte</a>
+  <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1395515437885952151&scope=bot%20applications.commands&permissions=8">Invitar</a>
+  <a class="btn" href="https://discord.gg/CMv7K8pt7g">Soporte</a>
 </div>
 
 <div class="card">
-<p>💖 Hola, soy <b>zNicol System’s</b></p>
+<p>💖 Hola, soy <b>zNicol System’s</b>, tu bot multifunción diseñada para hacer tu servidor más bonito y organizado.</p>
+<p><b>¿Qué puedo hacer?</b></p>
+<p>⚙️ Sistemas avanzados</p>
+<p>🛡️ Moderación</p>
+<p>🎮 Comandos divertidos</p>
+<p><b>Cómo usarme:</b></p>
+<p>• Para ver todos mis prefix usa (zNicol prefix)</p>
+<p>• Para ver todos mis comandos usa /help</p>
 </div>
 
 <div class="socials">
@@ -262,27 +262,11 @@ for (let i = 0; i < 20; i++) {
 
 </div>
 
+<!-- CONTADOR REAL + ANIMADO -->
 <div class="visit-counter">
-  <p>Visitas:</p>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=znicol-systems.github.io"/>
+  <p>Visitas a la página:</p>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=znicol-systems.github.io&left_text=Visitas&right_color=ff7ac6"/>
 </div>
-
-<footer class="footer-pro">
-  <p>© 2026 zNicol System's</p>
-  <p>Hecho con 💖 para Discord</p>
-</footer>
-
-<audio id="clickSound">
-  <source src="https://www.myinstants.com/media/sounds/mouse-click.mp3">
-</audio>
-
-<script>
-document.addEventListener("click", () => {
-  const s = document.getElementById("clickSound");
-  s.currentTime = 0;
-  s.play().catch(()=>{});
-});
-</script>
 
 </body>
 </html>
