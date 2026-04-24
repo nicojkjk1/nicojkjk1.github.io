@@ -153,49 +153,11 @@ h1 img {
   background: linear-gradient(135deg, #ff7ac6, #ffb3e6);
 }
 
-/* CONTADOR ANIMADO */
+/* CONTADOR */
 .visit-counter {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  animation: counterFloat 3s ease-in-out infinite;
-}
-
-.visit-counter p {
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 0 10px #ff7ac6;
-}
-
-.visit-counter img {
-  transform: scale(1.4);
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 0 10px #ff7ac6);
-}
-
-.visit-counter img:hover {
-  transform: scale(1.55);
-  filter: drop-shadow(0 0 18px #ff7ac6);
-}
-
-@keyframes counterFloat {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
-}
-
-/* 📱 MOBILE FIX */
-@media (max-width: 768px) {
-
-  h1 {
-    font-size: 26px;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
 </head>
@@ -205,28 +167,6 @@ h1 img {
 <video autoplay muted loop id="bg-video">
 <source src="2.mp4" type="video/mp4">
 </video>
-
-<script>
-for (let i = 0; i < 25; i++) {
-  let p = document.createElement("div");
-  p.className = "particle";
-  p.style.left = Math.random() * 100 + "vw";
-  p.style.animationDuration = (3 + Math.random() * 5) + "s";
-  document.body.appendChild(p);
-}
-</script>
-
-<script>
-const flowers = ["🌸","🌷","💮","🌺"];
-for (let i = 0; i < 20; i++) {
-  let f = document.createElement("div");
-  f.className = "flower";
-  f.innerText = flowers[Math.floor(Math.random()*flowers.length)];
-  f.style.left = Math.random() * 100 + "vw";
-  f.style.animationDuration = (5 + Math.random() * 5) + "s";
-  document.body.appendChild(f);
-}
-</script>
 
 <div class="container">
 
@@ -245,32 +185,22 @@ for (let i = 0; i < 20; i++) {
 </div>
 
 <div class="card">
-<p>💖 Hola, soy <b>zNicol System’s</b>, tu bot multifunción diseñada para hacer tu servidor más bonito y organizado.</p>
-<p><b>¿Qué puedo hacer?</b></p>
-<p>⚙️ Sistemas avanzados</p>
-<p>🛡️ Moderación</p>
-<p>🎮 Comandos divertidos</p>
-<p><b>Cómo usarme:</b></p>
-<p>• Para ver todos mis prefix usa (zNicol prefix)</p>
-<p>• Para ver todos mis comandos usa /help</p>
-</div>
-
-<div class="socials">
-  <h3>Redes</h3>
-  <a href="#">Mi Comunidad</a>
+<p>💖 Hola, soy <b>zNicol System’s</b></p>
 </div>
 
 </div>
 
-<!-- CONTADOR REAL + ANIMADO -->
 <div class="visit-counter">
-  <p>Visitas a la página:</p>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=znicol-systems.github.io&left_text=Visitas&right_color=ff7ac6"/>
+  <p>Visitas:</p>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=znicol-systems.github.io"/>
 </div>
 
 <!-- UWU NOTIFICACIÓN -->
 <div id="uwuNotif" style="position:fixed; bottom:20px; left:20px; background:rgba(49,51,56,0.9); border:1px solid #ff7ac6; border-radius:15px; padding:12px; display:flex; align-items:center; gap:10px; backdrop-filter:blur(10px); box-shadow:0 0 15px #ff7ac6; transform:translateY(120px); opacity:0; transition:0.5s; z-index:999;">
-  <img src="1.mp4" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+  
+  <!-- CAMBIA AQUÍ TU LOGO -->
+  <img src="https://cdn.discordapp.com/emojis/1494059956016513085.png" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+
   <div>
     <strong style="color:#ff7ac6;">Bienvenido~ 💖</strong>
     <p id="uwuText" style="margin:0; font-size:13px;"></p>
@@ -279,24 +209,19 @@ for (let i = 0; i < 20; i++) {
 
 <script>
 const frasesUwu = [
-  "Holiii~ gracias por pasar por aquí uwu ✨",
-  "Eres increíble, gracias por visitar 💜",
-  "Espero que te guste el bot~ 🥺",
-  "Gracias por apoyar el proyecto 💖",
-  "Ojalá invites el bot a tu server 😳",
-  "Te mando un abracito virtual uwu 🫶",
-  "Bienvenido~ espero que disfrutes todo 💕",
-  "Gracias por tomarte el tiempo de entrar ✨",
-  "Tu visita hace feliz al bot 🥺💜",
-  "Espero verte en la comunidad uwu 🌸"
+  "Holiii~ gracias por pasar uwu ✨",
+  "Eres increíble 💜",
+  "Espero que te guste el bot 🥺",
+  "Gracias por apoyar 💖",
+  "Invita el bot 😳",
+  "Te mando un abracito 🫶"
 ];
 
 setTimeout(() => {
   const box = document.getElementById("uwuNotif");
   const text = document.getElementById("uwuText");
 
-  const random = frasesUwu[Math.floor(Math.random() * frasesUwu.length)];
-  text.innerText = random;
+  text.innerText = frasesUwu[Math.floor(Math.random() * frasesUwu.length)];
 
   box.style.transform = "translateY(0)";
   box.style.opacity = "1";
