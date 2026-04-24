@@ -268,18 +268,36 @@ for (let i = 0; i < 20; i++) {
   <img src="https://visitor-badge.laobi.icu/badge?page_id=znicol-systems.github.io&left_text=Visitas&right_color=ff7ac6"/>
 </div>
 
-<!-- UWU NOTIFICACIÓN (AGREGADO) -->
+<!-- UWU NOTIFICACIÓN -->
 <div id="uwuNotif" style="position:fixed; bottom:20px; left:20px; background:rgba(49,51,56,0.9); border:1px solid #ff7ac6; border-radius:15px; padding:12px; display:flex; align-items:center; gap:10px; backdrop-filter:blur(10px); box-shadow:0 0 15px #ff7ac6; transform:translateY(120px); opacity:0; transition:0.5s; z-index:999;">
-  <img src="https://i.imgur.com/6X4bZ6p.png" style="width:45px; height:45px; border-radius:50%;">
+  <img src="1.mp4" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
   <div>
-    <strong style="color:#ff7ac6;">Hola~ 💖</strong>
-    <p style="margin:0; font-size:13px;">Bienvenido a zNicol System's ✨</p>
+    <strong style="color:#ff7ac6;">Bienvenido~ 💖</strong>
+    <p id="uwuText" style="margin:0; font-size:13px;"></p>
   </div>
 </div>
 
 <script>
+const frasesUwu = [
+  "Holiii~ gracias por pasar por aquí uwu ✨",
+  "Eres increíble, gracias por visitar 💜",
+  "Espero que te guste el bot~ 🥺",
+  "Gracias por apoyar el proyecto 💖",
+  "Ojalá invites el bot a tu server 😳",
+  "Te mando un abracito virtual uwu 🫶",
+  "Bienvenido~ espero que disfrutes todo 💕",
+  "Gracias por tomarte el tiempo de entrar ✨",
+  "Tu visita hace feliz al bot 🥺💜",
+  "Espero verte en la comunidad uwu 🌸"
+];
+
 setTimeout(() => {
   const box = document.getElementById("uwuNotif");
+  const text = document.getElementById("uwuText");
+
+  const random = frasesUwu[Math.floor(Math.random() * frasesUwu.length)];
+  text.innerText = random;
+
   box.style.transform = "translateY(0)";
   box.style.opacity = "1";
 
@@ -287,6 +305,7 @@ setTimeout(() => {
     box.style.transform = "translateY(120px)";
     box.style.opacity = "0";
   }, 5000);
+
 }, 1000);
 </script>
 
