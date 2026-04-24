@@ -268,5 +268,27 @@ for (let i = 0; i < 20; i++) {
   <img src="https://visitor-badge.laobi.icu/badge?page_id=znicol-systems.github.io&left_text=Visitas&right_color=ff7ac6"/>
 </div>
 
+<!-- UWU NOTIFICACIÓN (AGREGADO) -->
+<div id="uwuNotif" style="position:fixed; bottom:20px; left:20px; background:rgba(49,51,56,0.9); border:1px solid #ff7ac6; border-radius:15px; padding:12px; display:flex; align-items:center; gap:10px; backdrop-filter:blur(10px); box-shadow:0 0 15px #ff7ac6; transform:translateY(120px); opacity:0; transition:0.5s; z-index:999;">
+  <img src="https://i.imgur.com/6X4bZ6p.png" style="width:45px; height:45px; border-radius:50%;">
+  <div>
+    <strong style="color:#ff7ac6;">Hola~ 💖</strong>
+    <p style="margin:0; font-size:13px;">Bienvenido a zNicol System's ✨</p>
+  </div>
+</div>
+
+<script>
+setTimeout(() => {
+  const box = document.getElementById("uwuNotif");
+  box.style.transform = "translateY(0)";
+  box.style.opacity = "1";
+
+  setTimeout(() => {
+    box.style.transform = "translateY(120px)";
+    box.style.opacity = "0";
+  }, 5000);
+}, 1000);
+</script>
+
 </body>
 </html>
