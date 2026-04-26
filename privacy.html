@@ -459,7 +459,7 @@
   </nav>
 
   <header class="hero">
-    <div class="badge">🔒 Documento oficial de zNico Community</div>
+    <div class="badge">🔒 Documento oficial de zNico Community ©</div>
 
     <h1>Política de Privacidad<br />y Términos de Servicio</h1>
 
@@ -568,8 +568,8 @@
           <h2>2. Responsable del bot</h2>
 
           <p>
-            El responsable del funcionamiento de esta aplicación es el equipo o propietario
-            de <strong>zNico Community</strong>, encargado del desarrollo, mantenimiento
+            El responsable del funcionamiento de esta aplicación es el propietario
+            de <strong>zNico Community ©</strong>, encargado del desarrollo, mantenimiento
             y administración de <strong>zNicol System's</strong>.
           </p>
 
@@ -972,29 +972,60 @@
             con el bot, puedes contactar al propietario o equipo responsable de <strong>zNico Community</strong>.
           </p>
 
-          <p>
-            Recomendado: coloca aquí tu Discord, servidor de soporte o correo si tienes uno.
-          </p>
+       <p>
+  <strong>ADVERTENCIA: Uso indebido del sistema de soporte</strong><br><br>
+  El sistema de soporte está destinado exclusivamente para consultas legítimas, asistencia técnica y reportes relacionados con el funcionamiento del bot.<br><br>
+  
+  El uso indebido, incluyendo spam, bromas o solicitudes irrelevantes, puede resultar en restricciones de uso o sanciones, incluyendo el bloqueo del acceso al bot para el usuario o incluso el servidor.<br><br>
+  
+  Por favor, utiliza estos medios de contacto de forma responsable.
+</p>
 
-          <div class="copy-box">
-            <input
-              class="copy-input"
-              id="privacyUrl"
-              value="https://znicol-systems.github.io/privacy.html"
-              readonly
-            />
-            <button class="small-btn" onclick="copyPrivacyUrl()">Copiar URL</button>
-          </div>
+<h3>📩 Medios de contacto</h3>
 
-          <div class="info-box" id="copyStatus" style="display: none;">
-            URL copiada correctamente.
-          </div>
-        </article>
-      </section>
-    </div>
-  </main>
+<div class="copy-box">
+  <input
+    class="copy-input"
+    id="emailContact"
+    value="contacto@znicol.com"
+    readonly
+  />
+  <button class="small-btn" onclick="copyText('emailContact')">Copiar correo</button>
+</div>
 
-  <button class="top-button" id="topButton" onclick="scrollToTop()">↑</button>
+<div class="copy-box">
+  <input
+    class="copy-input"
+    id="discordComunidad"
+    value="https://discord.gg/TU-COMUNIDAD"
+    readonly
+  />
+  <button class="small-btn" onclick="copyText('discordComunidad')">Copiar comunidad</button>
+</div>
+
+<div class="copy-box">
+  <input
+    class="copy-input"
+    id="discordBot"
+    value="https://discord.gg/TU-BOT"
+    readonly
+  />
+  <button class="small-btn" onclick="copyText('discordBot')">Copiar soporte bot</button>
+</div>
+
+<div class="copy-box">
+  <input
+    class="copy-input"
+    id="privacyUrl"
+    value="https://znicol-systems.github.io/privacy.html"
+    readonly
+  />
+  <button class="small-btn" onclick="copyText('privacyUrl')">Copiar URL</button>
+</div>
+
+<div class="info-box" id="copyStatus" style="display: none;">
+  Copiado correctamente.
+</div>
 
   <footer class="footer">
     <p>
