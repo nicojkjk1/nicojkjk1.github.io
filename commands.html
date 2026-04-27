@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Comandos • zNicol System's</title>
+
+<meta name="description" content="Descubre todos los comandos de zNicol System's: moderación, seguridad, diversión y gestión avanzada para Discord.">
+
+<meta property="og:title" content="Comandos • zNicol System's">
+<meta property="og:description" content="Lista completa de comandos del bot con funciones de moderación, anti-scam, logs y más.">
+<meta property="og:image" content="https://znicol-systems.github.io/nicolle.png">
+<meta property="og:url" content="https://znicol-systems.github.io/commands">
+<meta property="og:type" content="website">
+
+<meta name="theme-color" content="#ff7ac6">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #1e1f22, #2a1c2c);
+  color: white;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.header p {
+  opacity: 0.8;
+}
+
+/* SEARCH */
+.search-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-box input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(49,51,56,0.9);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff7ac6;
+}
+
+.card h3 {
+  margin: 0;
+  color: #ff7ac6;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* CATEGORY */
+.category {
+  margin: 30px 20px 10px;
+  font-size: 22px;
+  color: #ffb3e6;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>✨ Comandos de zNicol System's</h1>
+  <p>Todo lo que puedes hacer conmigo 💖</p>
+</div>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="Buscar comando...">
+</div>
+
+<div class="category">🛡️ Moderación</div>
+<div class="grid" id="commands">
+
+<div class="card"><h3>/ban</h3><p>Banea usuarios del servidor.</p></div>
+<div class="card"><h3>/kick</h3><p>Expulsa usuarios.</p></div>
+<div class="card"><h3>/mute</h3><p>Aísla temporalmente.</p></div>
+<div class="card"><h3>/unmute</h3><p>Quita aislamiento.</p></div>
+<div class="card"><h3>/clear</h3><p>Borra mensajes.</p></div>
+
+</div>
+
+<div class="category">🚨 Seguridad</div>
+<div class="grid">
+
+<div class="card"><h3>/antilink</h3><p>Configura anti links.</p></div>
+<div class="card"><h3>/antiscam</h3><p>Protección contra estafas.</p></div>
+<div class="card"><h3>/logs</h3><p>Configura logs.</p></div>
+
+</div>
+
+<div class="category">🎮 Diversión</div>
+<div class="grid">
+
+<div class="card"><h3>/meme</h3><p>Genera memes.</p></div>
+<div class="card"><h3>/avatar</h3><p>Muestra avatar.</p></div>
+<div class="card"><h3>/ping</h3><p>Latencia del bot.</p></div>
+
+</div>
+
+<div class="category">⚙️ Gestión</div>
+<div class="grid">
+
+<div class="card"><h3>/config</h3><p>Configuración del bot.</p></div>
+<div class="card"><h3>/prefix</h3><p>Muestra prefix.</p></div>
+
+</div>
+
+<script>
+
+const search = document.getElementById("search");
+
+search.addEventListener("input", () => {
+  const value = search.value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+
+</script>
+
+</body>
+</html>
