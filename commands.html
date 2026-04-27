@@ -1536,29 +1536,74 @@
 
       </div>
     </section>
+<section class="section category-block" data-category-section="giveaway">
+  <div class="category-title">
+    <h3>🎉 Giveaways</h3>
+    <span>Sistema completo para crear, editar, finalizar y rerollear sorteos</span>
+  </div>
 
-    <section class="section category-block" data-category-section="giveaway">
-      <div class="category-title">
-        <h3>🎉 Giveaways</h3>
-        <span>Herramientas para sorteos y eventos de comunidad</span>
+  <div class="commands-grid">
+    <article class="command-card" data-category="giveaway" data-search="giveaway start iniciar sorteo premio duracion ganadores canal">
+      <div class="command-top">
+        <div class="command-icon">🎁</div>
+        <span class="command-type">Slash</span>
       </div>
+      <h4>/giveaway start</h4>
+      <p>Inicia un nuevo sorteo con duración, premio, cantidad de ganadores y canal personalizado.</p>
+      <span class="usage">Uso: /giveaway start duration prize winners channel</span>
+      <div class="tags">
+        <span class="tag">crear</span>
+        <span class="tag">sorteos</span>
+        <span class="tag">premios</span>
+      </div>
+    </article>
 
-      <div class="commands-grid">
-        <article class="command-card" data-category="giveaway" data-search="giveaway sorteo premio evento comunidad">
-          <div class="command-top">
-            <div class="command-icon">🎉</div>
-            <span class="command-type">Slash</span>
-          </div>
-          <h4>/giveaway</h4>
-          <p>Crea y gestiona sorteos dentro del servidor para eventos o premios.</p>
-          <span class="usage">Uso: /giveaway crear</span>
-          <div class="tags">
-            <span class="tag">sorteos</span>
-            <span class="tag">eventos</span>
-          </div>
-        </article>
+    <article class="command-card" data-category="giveaway" data-search="giveaway end terminar finalizar sorteo giveaway id ganador">
+      <div class="command-top">
+        <div class="command-icon">🏁</div>
+        <span class="command-type">Slash</span>
       </div>
-    </section>
+      <h4>/giveaway end</h4>
+      <p>Finaliza un giveaway existente usando su ID y selecciona los ganadores automáticamente.</p>
+      <span class="usage">Uso: /giveaway end giveaway_id</span>
+      <div class="tags">
+        <span class="tag">finalizar</span>
+        <span class="tag">ganadores</span>
+        <span class="tag">ID</span>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="giveaway" data-search="giveaway reroll nuevos ganadores sorteo repetir ganador">
+      <div class="command-top">
+        <div class="command-icon">🔁</div>
+        <span class="command-type">Slash</span>
+      </div>
+      <h4>/giveaway reroll</h4>
+      <p>Vuelve a seleccionar ganadores de un sorteo existente, ideal si un ganador no reclama su premio.</p>
+      <span class="usage">Uso: /giveaway reroll giveaway_id winners</span>
+      <div class="tags">
+        <span class="tag">reroll</span>
+        <span class="tag">ganadores</span>
+        <span class="tag">sorteos</span>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="giveaway" data-search="giveaway edit editar sorteo duracion premio ganadores canal">
+      <div class="command-top">
+        <div class="command-icon">✏️</div>
+        <span class="command-type">Slash</span>
+      </div>
+      <h4>/giveaway edit</h4>
+      <p>Edita un giveaway activo cambiando duración, premio, cantidad de ganadores o canal del sorteo.</p>
+      <span class="usage">Uso: /giveaway edit giveaway_id duration prize winners channel</span>
+      <div class="tags">
+        <span class="tag">editar</span>
+        <span class="tag">configuración</span>
+        <span class="tag">sorteos</span>
+      </div>
+    </article>
+  </div>
+</section>
 
     <div class="no-results" id="noResults">
       <h3>😵 No encontré ese comando</h3>
