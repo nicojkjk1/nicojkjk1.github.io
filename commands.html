@@ -10,19 +10,19 @@
 
   <title>Comandos • zNicol System's</title>
 
-  <meta name="description" content="Explora todos los comandos de zNicol System's: moderación, seguridad, logs, diversión, utilidad, Minecraft, giveaways y gestión avanzada para Discord.">
+  <meta name="description" content="Explora el catálogo oficial de comandos de zNicol System's: moderación avanzada, seguridad automática, anti-scam, AutoMod, logs inteligentes, utilidad, diversión, Minecraft, giveaways y herramientas de administración para Discord.">
 
   <meta name="keywords" content="zNicol System's, comandos discord bot, bot discord, moderacion discord, anti scam, anti links, logs discord, bot seguridad discord">
   <meta name="author" content="zNico Community">
 
   <meta property="og:title" content="Comandos • zNicol System's">
-  <meta property="og:description" content="Catálogo completo de comandos de zNicol System's: moderación, seguridad, logs, diversión, utilidad y más.">
+  <meta property="og:description" content="Catálogo profesional de comandos de zNicol System's con sistemas de seguridad, moderación, logs, utilidad, diversión y configuración avanzada.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="zNicol System's">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Comandos • zNicol System's">
-  <meta name="twitter:description" content="Lista completa de comandos del bot zNicol System's.">
+  <meta name="twitter:description" content="Lista completa y organizada de comandos del bot zNicol System's para comunidades de Discord.">
 
   <meta name="theme-color" content="#ff7ac6">
 
@@ -646,6 +646,87 @@
       color: var(--muted);
     }
 
+
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .info-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.20);
+      transition: 0.25s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border);
+      box-shadow: 0 18px 45px rgba(255, 122, 198, 0.12);
+    }
+
+    .info-card strong {
+      display: block;
+      color: var(--pink-light);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--soft);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .command-details {
+      position: relative;
+      z-index: 1;
+      margin-top: 12px;
+      padding: 11px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .command-details b {
+      color: var(--pink-light);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(132, 245, 180, 0.12);
+      border: 1px solid rgba(132, 245, 180, 0.24);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel-note {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(255, 122, 198, 0.16), rgba(179, 136, 255, 0.10));
+      border: 1px solid var(--border);
+      color: var(--soft);
+      line-height: 1.7;
+    }
+
     .no-results {
       display: none;
       width: min(1180px, calc(100% - 32px));
@@ -740,6 +821,10 @@
       .commands-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 680px) {
@@ -776,6 +861,10 @@
       }
 
       .commands-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
         grid-template-columns: 1fr;
       }
 
@@ -838,11 +927,12 @@
         </h1>
 
         <p>
-          Explora las herramientas que puedo ofrecer a tu servidor: moderación,
-          seguridad anti-scam, anti-links, logs, diversión, utilidad, Minecraft,
-          giveaways y administración avanzada. Una página de comandos decente,
-          porque aparentemente hasta los bots necesitan marketing para que los
-          humanos hagan clic.
+          Explora el catálogo oficial de herramientas de zNicol System's para administrar,
+          proteger y mejorar tu servidor de Discord. Aquí encontrarás comandos de
+          moderación avanzada, seguridad automática, anti-scam, anti-links, logs,
+          utilidades, diversión, Minecraft, sorteos y configuración profesional.
+          Todo organizado para que tu staff encuentre rápido lo que necesita, porque
+          buscar comandos en un chat perdido del 2022 era una tragedia anunciada.
         </p>
 
         <div class="hero-actions">
@@ -898,12 +988,45 @@
 
     <section class="section">
       <div class="section-header">
-        <h2>🌸 Busca, filtra y vende tu bot como se debe</h2>
+        <h2>🌸 Busca, filtra y presenta tus comandos como se debe</h2>
         <p>
-          Usa el buscador para encontrar comandos por nombre, descripción o etiqueta.
-          También puedes filtrar por categoría. Sí, un buscador real, porque copiar
-          una lista gigante en Discord como cavernícola ya no era opción.
+          Encuentra comandos por nombre, función, categoría o etiqueta. El panel está pensado para que usuarios y staff entiendan rápido qué hace cada sistema, cuándo usarlo y qué nivel de control ofrece. Sí, una página ordenada: la humanidad todavía tiene pequeñas victorias.
         </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>🧭 Vista rápida del panel</h2>
+        <p>
+          Este catálogo resume las funciones principales del bot y ayuda a elegir el comando correcto sin tener que adivinar, rezar o molestar al staff cada cinco minutos.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>🛡️ Seguridad activa</strong>
+          <p>Herramientas para detectar spam, enlaces no permitidos, bots sospechosos, abuso de menciones y contenido peligroso.</p>
+        </div>
+
+        <div class="info-card">
+          <strong>📜 Logs organizados</strong>
+          <p>Registra acciones importantes del servidor para que el staff pueda revisar cambios, sanciones y eventos relevantes.</p>
+        </div>
+
+        <div class="info-card">
+          <strong>⚙️ Configuración flexible</strong>
+          <p>Permite activar módulos, elegir canales, ignorar roles, ajustar palabras bloqueadas y adaptar el bot a cada comunidad.</p>
+        </div>
+
+        <div class="info-card">
+          <strong>💖 Experiencia cuidada</strong>
+          <p>Comandos claros, diseño visual bonito y categorías pensadas para que cualquier usuario entienda el sistema sin sufrir.</p>
+        </div>
+      </div>
+
+      <div class="panel-note">
+        <b>Consejo:</b> para servidores grandes, configura primero los sistemas de seguridad y logs. Después activa utilidades, diversión y sorteos. Hacerlo al revés también funciona, pero es como construir una casa poniendo primero las cortinas.
       </div>
     </section>
 
@@ -929,7 +1052,7 @@
     <section class="section category-block" id="moderacion" data-category-section="moderacion">
       <div class="category-title">
         <h3>🛡️ Moderación</h3>
-        <span>Comandos para controlar usuarios y mantener el orden</span>
+        <span>Herramientas para aplicar sanciones, revisar historiales y mantener la convivencia del servidor</span>
       </div>
 
       <div class="commands-grid">
@@ -939,8 +1062,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/ban</h4>
-          <p>Banea a un usuario del servidor con una razón definida por el staff.</p>
+          <p>Banea a un usuario del servidor con una razón clara para mantener el historial de moderación organizado.</p>
           <span class="usage">Uso: /ban usuario razón</span>
+          <div class="command-details"><b>Ideal para:</b> sanciones graves, usuarios conflictivos o reincidencias que requieren expulsión permanente.</div>
           <div class="tags">
             <span class="tag">moderación</span>
             <span class="tag">sanción</span>
@@ -954,8 +1078,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/unban</h4>
-          <p>Quita el ban a un usuario previamente sancionado en el servidor.</p>
+          <p>Retira el ban de un usuario previamente sancionado cuando el staff decide permitir su regreso.</p>
           <span class="usage">Uso: /unban usuario/id</span>
+          <div class="command-details"><b>Ideal para:</b> retirar sanciones antiguas o corregir un ban aplicado por error.</div>
           <div class="tags">
             <span class="tag">moderación</span>
             <span class="tag">perdón</span>
@@ -969,8 +1094,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/kick</h4>
-          <p>Expulsa a un miembro del servidor sin bloquear su regreso.</p>
+          <p>Expulsa a un miembro del servidor sin impedir su regreso, útil para sanciones intermedias.</p>
           <span class="usage">Uso: /kick usuario razón</span>
+          <div class="command-details"><b>Ideal para:</b> expulsiones temporales sin impedir que el usuario vuelva al servidor.</div>
           <div class="tags">
             <span class="tag">moderación</span>
             <span class="tag">expulsión</span>
@@ -983,8 +1109,9 @@
             <span class="command-type">Slash / Prefix</span>
           </div>
           <h4>/mute</h4>
-          <p>Aplica aislamiento temporal a un usuario para limitar su actividad.</p>
+          <p>Aplica aislamiento temporal a un usuario para detener spam, discusiones o incumplimientos de reglas.</p>
           <span class="usage">Uso: /mute usuario tiempo razón</span>
+          <div class="command-details"><b>Ideal para:</b> detener discusiones, spam o comportamiento molesto sin expulsar al usuario.</div>
           <div class="tags">
             <span class="tag">aislamiento</span>
             <span class="tag">timeout</span>
@@ -997,8 +1124,9 @@
             <span class="command-type">Slash / Prefix</span>
           </div>
           <h4>/unmute</h4>
-          <p>Elimina el aislamiento de un usuario sancionado temporalmente.</p>
+          <p>Elimina el aislamiento de un usuario cuando la sanción finaliza o fue aplicada por error.</p>
           <span class="usage">Uso: /unmute usuario</span>
+          <div class="command-details"><b>Ideal para:</b> quitar el aislamiento cuando la sanción ya no sea necesaria.</div>
           <div class="tags">
             <span class="tag">aislamiento</span>
             <span class="tag">moderación</span>
@@ -1011,8 +1139,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/warn</h4>
-          <p>Agrega una advertencia a un usuario con motivo registrado.</p>
+          <p>Registra una advertencia con motivo para llevar control del comportamiento del usuario.</p>
           <span class="usage">Uso: /warn usuario razón</span>
+          <div class="command-details"><b>Ideal para:</b> dejar constancia antes de aplicar sanciones más fuertes.</div>
           <div class="tags">
             <span class="tag">warns</span>
             <span class="tag">staff</span>
@@ -1025,7 +1154,7 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/warnings</h4>
-          <p>Muestra el historial de advertencias de un miembro.</p>
+          <p>Consulta el historial de advertencias de un miembro para revisar reincidencias antes de sancionar.</p>
           <span class="usage">Uso: /warnings usuario</span>
           <div class="tags">
             <span class="tag">historial</span>
@@ -1039,7 +1168,7 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/removewarn</h4>
-          <p>Elimina una advertencia específica del historial de un usuario.</p>
+          <p>Elimina una advertencia concreta cuando fue aplicada por error o ya no corresponde.</p>
           <span class="usage">Uso: /removewarn usuario id</span>
           <div class="tags">
             <span class="tag">warns</span>
@@ -1053,7 +1182,7 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/clearwarns</h4>
-          <p>Limpia todas las advertencias registradas de un miembro.</p>
+          <p>Reinicia el historial de advertencias de un usuario bajo decisión del staff.</p>
           <span class="usage">Uso: /clearwarns usuario</span>
           <div class="tags">
             <span class="tag">warns</span>
@@ -1067,8 +1196,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/purge</h4>
-          <p>Borra mensajes del canal de forma rápida para mantenerlo limpio.</p>
+          <p>Elimina mensajes en cantidad para limpiar spam, flood o contenido fuera de lugar rápidamente.</p>
           <span class="usage">Uso: /purge cantidad</span>
+          <div class="command-details"><b>Ideal para:</b> limpiar spam, comandos viejos o mensajes innecesarios de un canal.</div>
           <div class="tags">
             <span class="tag">mensajes</span>
             <span class="tag">limpieza</span>
@@ -1080,7 +1210,7 @@
     <section class="section category-block" id="seguridad" data-category-section="seguridad">
       <div class="category-title">
         <h3>🚨 Seguridad</h3>
-        <span>Sistemas para proteger tu servidor del caos digital</span>
+        <span>Sistemas avanzados para prevenir spam, bots maliciosos, enlaces peligrosos y abuso dentro de la comunidad</span>
       </div>
 
       <div class="commands-grid">
@@ -1090,8 +1220,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/antibot</h4>
-          <p>Configura protección contra bots sospechosos y entradas peligrosas.</p>
+          <p>Configura protección contra bots sospechosos, entradas peligrosas y posibles raids automatizadas.</p>
           <span class="usage">Uso: /antibot configurar</span>
+          <div class="command-details"><b>Incluye:</b> revisión de bots entrantes, protección ante raids y alertas para staff.</div>
           <div class="tags">
             <span class="tag">bots</span>
             <span class="tag">seguridad</span>
@@ -1104,41 +1235,36 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/antilink</h4>
-          <p>Activa o desactiva el sistema anti-links y configura roles exentos.</p>
+          <p>Controla enlaces no permitidos, invitaciones y excepciones para roles autorizados.</p>
           <span class="usage">Uso: /antilink activar/desactivar</span>
+          <div class="command-details"><b>Incluye:</b> bloqueo de enlaces, invitaciones sospechosas y roles exentos para staff o partners.</div>
           <div class="tags">
             <span class="tag">links</span>
             <span class="tag">anti-spam</span>
           </div>
         </article>
 
-        <article class="command-card" data-category="seguridad" data-search="automod auto mod seguridad discord filtros proteccion">
+        <article class="command-card" data-category="seguridad" data-search="automod auto mod automod advanced seguridad discord filtros proteccion avanzada moderacion spam palabras prohibidas logs automaticos">
           <div class="command-top">
-            <div class="command-icon">🧠</div>
+            <div class="command-icon">🛡️</div>
             <span class="command-type">Slash</span>
           </div>
-          <h4>/automod</h4>
-          <p>Configura funciones automáticas de moderación y seguridad.</p>
-          <span class="usage">Uso: /automod configurar</span>
+          <h4>/automod-advanced</h4>
+          <p>Sistema avanzado de moderación automática que detecta spam, palabras prohibidas, menciones masivas, flood y comportamiento abusivo en tiempo real.</p>
+          <span class="usage">Uso: /automod-advanced activar | logs | logs-auto | palabra-agregar</span>
+          <div class="command-details">
+            <b>Incluye:</b> filtros configurables, advertencias por MD, eliminación automática de mensajes, sistema de strikes, aislamiento temporal y logs inteligentes.
+          </div>
+          <span class="status-pill">✅ Recomendado para seguridad</span>
           <div class="tags">
-            <span class="tag">auto</span>
+            <span class="tag">automático</span>
             <span class="tag">protección</span>
+            <span class="tag">anti-spam</span>
+            <span class="tag">logs</span>
           </div>
         </article>
 
-        <article class="command-card" data-category="seguridad" data-search="verificacion verificar seguridad miembros entrada">
-          <div class="command-top">
-            <div class="command-icon">✅</div>
-            <span class="command-type">Slash</span>
-          </div>
-          <h4>/verificacion</h4>
-          <p>Crea o configura un sistema de verificación para nuevos miembros.</p>
-          <span class="usage">Uso: /verificacion setup</span>
-          <div class="tags">
-            <span class="tag">verificación</span>
-            <span class="tag">miembros</span>
-          </div>
-        </article>
+        
 
         <article class="command-card" data-category="seguridad" data-search="whitelisttag whitelist tags seguridad permisos exentos">
           <div class="command-top">
@@ -1146,7 +1272,7 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/whitelisttag</h4>
-          <p>Gestiona y bloquea palabras o tags específicos por canal para evitar spam, menciones molestas o contenido no permitido..</p>
+          <p>Gestiona palabras, tags o patrones permitidos para reducir spam, menciones molestas y contenido repetitivo.</p>
           <span class="usage">Uso: /whitelisttag configurar</span>
           <div class="tags">
             <span class="tag">whitelist</span>
@@ -1159,7 +1285,7 @@
     <section class="section category-block" data-category-section="logs">
       <div class="category-title">
         <h3>📜 Logs y registros</h3>
-        <span>Controla lo que pasa en tu servidor sin adivinar como detective barato</span>
+        <span>Supervisa acciones importantes del servidor con registros claros, útiles y preparados para el staff</span>
       </div>
 
       <div class="commands-grid">
@@ -1169,8 +1295,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/auditlog-setup</h4>
-          <p>Configura el canal donde se enviarán los logs del servidor.</p>
+          <p>Define el canal donde se enviarán registros importantes del servidor para revisión del staff.</p>
           <span class="usage">Uso: /auditlog-setup canal</span>
+          <div class="command-details"><b>Registra:</b> cambios de canales, roles, usuarios, sanciones y eventos importantes del servidor.</div>
           <div class="tags">
             <span class="tag">logs</span>
             <span class="tag">setup</span>
@@ -1183,8 +1310,9 @@
             <span class="command-type">Slash</span>
           </div>
           <h4>/auditlog-delete</h4>
-          <p>Elimina la configuración actual del canal de logs.</p>
+          <p>Elimina la configuración actual del sistema de logs cuando necesitas cambiar o desactivar registros.</p>
           <span class="usage">Uso: /auditlog-delete</span>
+          <div class="command-details"><b>Nota:</b> desactiva los registros automáticos hasta configurar un nuevo canal.</div>
           <div class="tags">
             <span class="tag">logs</span>
             <span class="tag">delete</span>
@@ -1196,7 +1324,7 @@
     <section class="section category-block" data-category-section="utilidad">
       <div class="category-title">
         <h3>⚙️ Utilidad e información</h3>
-        <span>Comandos prácticos para usuarios y servidores</span>
+        <span>Herramientas prácticas para consultar información, perfiles, traducciones y funciones rápidas</span>
       </div>
 
       <div class="commands-grid">
@@ -1278,6 +1406,7 @@
           <h4>/serverinfo</h4>
           <p>Muestra información detallada del servidor actual.</p>
           <span class="usage">Uso: /serverinfo</span>
+          <div class="command-details"><b>Muestra:</b> miembros, canales, roles, dueño, fecha de creación y detalles generales.</div>
           <div class="tags">
             <span class="tag">servidor</span>
             <span class="tag">info</span>
@@ -1292,6 +1421,7 @@
           <h4>/userinfo</h4>
           <p>Muestra información de un usuario, roles y datos del perfil.</p>
           <span class="usage">Uso: /userinfo usuario</span>
+          <div class="command-details"><b>Muestra:</b> perfil, roles, fechas importantes e información útil para staff.</div>
           <div class="tags">
             <span class="tag">usuario</span>
             <span class="tag">info</span>
@@ -1334,6 +1464,7 @@
           <h4>/tempvoice</h4>
           <p>Configura o utiliza el sistema de canales de voz temporales.</p>
           <span class="usage">Uso: /tempvoice setup</span>
+          <div class="command-details"><b>Ideal para:</b> crear salas privadas temporales sin llenar el servidor de canales abandonados.</div>
           <div class="tags">
             <span class="tag">voz</span>
             <span class="tag">canales</span>
@@ -1345,7 +1476,7 @@
     <section class="section category-block" data-category-section="diversion">
       <div class="category-title">
         <h3>🎮 Diversión y social</h3>
-        <span>Comandos para darle vida al servidor</span>
+        <span>Interacciones sociales y comandos ligeros para mantener activa la comunidad</span>
       </div>
 
       <div class="commands-grid">
@@ -1480,7 +1611,7 @@
     <section class="section category-block" data-category-section="minecraft">
       <div class="category-title">
         <h3>⛏️ Minecraft</h3>
-        <span>Herramientas útiles para comunidades con servidores de Minecraft</span>
+        <span>Funciones pensadas para comunidades que mezclan Discord con servidores o perfiles de Minecraft</span>
       </div>
 
       <div class="commands-grid">
@@ -1503,7 +1634,7 @@
     <section class="section category-block" data-category-section="admin">
       <div class="category-title">
         <h3>👑 Administración y configuración</h3>
-        <span>Comandos para dueños, staff avanzado y configuración del bot</span>
+        <span>Controles para dueños, administradores y configuración avanzada del servidor</span>
       </div>
 
       <div class="commands-grid">
@@ -1552,6 +1683,7 @@
       <h4>/giveaway start</h4>
       <p>Inicia un nuevo sorteo con duración, premio, cantidad de ganadores y canal personalizado.</p>
       <span class="usage">Uso: /giveaway start duration prize winners channel</span>
+      <div class="command-details"><b>Permite:</b> definir duración, premio, ganadores y canal donde se publicará el sorteo.</div>
       <div class="tags">
         <span class="tag">crear</span>
         <span class="tag">sorteos</span>
@@ -1567,6 +1699,7 @@
       <h4>/giveaway end</h4>
       <p>Finaliza un giveaway existente usando su ID y selecciona los ganadores automáticamente.</p>
       <span class="usage">Uso: /giveaway end giveaway_id</span>
+      <div class="command-details"><b>Ideal para:</b> cerrar sorteos activos antes de tiempo y anunciar ganadores.</div>
       <div class="tags">
         <span class="tag">finalizar</span>
         <span class="tag">ganadores</span>
@@ -1582,6 +1715,7 @@
       <h4>/giveaway reroll</h4>
       <p>Vuelve a seleccionar ganadores de un sorteo existente, ideal si un ganador no reclama su premio.</p>
       <span class="usage">Uso: /giveaway reroll giveaway_id winners</span>
+      <div class="command-details"><b>Ideal para:</b> elegir nuevos ganadores cuando alguien no reclama el premio.</div>
       <div class="tags">
         <span class="tag">reroll</span>
         <span class="tag">ganadores</span>
@@ -1597,6 +1731,7 @@
       <h4>/giveaway edit</h4>
       <p>Edita un giveaway activo cambiando duración, premio, cantidad de ganadores o canal del sorteo.</p>
       <span class="usage">Uso: /giveaway edit giveaway_id duration prize winners channel</span>
+      <div class="command-details"><b>Permite:</b> modificar datos importantes de un sorteo sin recrearlo desde cero.</div>
       <div class="tags">
         <span class="tag">editar</span>
         <span class="tag">configuración</span>
@@ -1651,7 +1786,16 @@
       "Me encanta ayudarte a organizar tu servidor 💖",
       "Anti-scam, anti-links y logs listos ✨",
       "Tu staff va a sufrir menos conmigo 💜",
-      "Gracias por confiar en zNicol System's 🫶"
+      "Gracias por confiar en zNicol System's 🫶",
+      "El panel está listo para que tu staff no se pierda 💼",
+      "AutoMod puede ayudarte a frenar el desastre antes de que empiece 🛡️",
+      "Los logs existen para que nadie diga 'yo no fui' 📜",
+      "Filtra por categoría y encuentra justo lo que necesitas ✨",
+      "La seguridad también puede verse bonita, qué concepto tan radical 💖",
+      "Configura tu servidor con calma, no como si estuvieras desactivando una bomba 💜",
+      "Las herramientas de moderación están listas para trabajar por ti 🧹",
+      "Los sorteos también merecen orden, increíble pero cierto 🎁",
+      "Tu comunidad puede tener estilo y control al mismo tiempo 🌸"
     ];
 
     const searchInput = document.getElementById("searchInput");
@@ -1762,7 +1906,7 @@
     }
 
     function animateOnScroll() {
-      const elements = document.querySelectorAll(".hero-main, .hero-side, .section-header, .category-title, .command-card, .footer");
+      const elements = document.querySelectorAll(".hero-main, .hero-side, .section-header, .category-title, .info-card, .panel-note, .command-card, .footer");
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
